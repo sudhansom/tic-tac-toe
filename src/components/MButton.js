@@ -1,18 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Button from "@mui/material/Button";
+import { clickedBtn } from "../redux/actions";
 
-function MButton({ boardState, row, col }) {
-  const [currentPlayer, setCurrentPlayer] = useState(1);
-  const [state, setState] = useState("");
+function MButton({ row, col }) {
+  const state = useSelector((state) => state);
+  const dispatch = useDispatch();
+  const boardState = state.boardState;
+  const currentPlayer = state.currentPlayer;
   const clickHandle = () => {
-    boardState[row][col] = currentPlayer;
-    setState(currentPlayer);
-    currentPlayer === 1 ? setCurrentPlayer(2) : setCurrentPlayer(1);
+    dispatch(clickedBtn(currentPlayer, row, col));
   };
   console.log(boardState);
   return (
     <Button onClick={clickHandle} className="game-square" variant="contained">
-      {state}
+      {boardState[row][col]}
     </Button>
   );
 }

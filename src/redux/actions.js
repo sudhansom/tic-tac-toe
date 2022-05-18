@@ -1,10 +1,16 @@
 export const clickedBtn = (currentPlayer, row, col) => {
   return {
-    type: "Clicked",
+    type: "CLICKED",
     payload: {
       currentPlayer,
       row,
       col,
     },
+  };
+};
+
+export const reset = () => {
+  return {
+    type: "RESET",
   };
 };

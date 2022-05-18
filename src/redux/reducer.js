@@ -16,6 +16,12 @@ const reducer = (state = initialState, action) => {
         boardState: boardState,
       };
 
+    case "RESET":
+      return {
+        currentPlayer: 1,
+        boardState: new Array(3).fill().map(() => new Array(3).fill("")),
+      };
+
     default:
       return state;
   }

@@ -16,7 +16,7 @@ function Board() {
             <tr key={row}>
               {col.map((cell, col) => (
                 <td key={row.toString() + col.toString()}>
-                  <MButton boardState={boardState} row={row} col={col} />
+                  <MButton row={row} col={col} />
                 </td>
               ))}
             </tr>
