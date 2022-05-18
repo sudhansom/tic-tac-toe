@@ -1,3 +1,10 @@
 table {
   margin: auto;
+  border-spacing: 8px;
+}
+.game-square {
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  vertical-align: top;
 }

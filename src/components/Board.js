@@ -5,21 +5,39 @@ import "./board.css";
 function Board() {
   return (
     <div className="board">
-      <table>
+      <table role={"grid"}>
         <tr>
-          <Button variant="contained"></Button>
-          <Button variant="contained"></Button>
-          <Button variant="contained"></Button>
+          <td>
+            <Button className="game-square" variant="contained"></Button>
+          </td>
+          <td>
+            <Button className="game-square" variant="contained"></Button>
+          </td>
+          <td>
+            <Button className="game-square" variant="contained"></Button>
+          </td>
         </tr>
         <tr>
-          <Button variant="contained"></Button>
-          <Button variant="contained"></Button>
-          <Button variant="contained"></Button>
+          <td>
+            <Button className="game-square" variant="contained"></Button>
+          </td>
+          <td>
+            <Button className="game-square" variant="contained"></Button>
+          </td>
+          <td>
+            <Button className="game-square" variant="contained"></Button>
+          </td>
         </tr>
         <tr>
-          <Button variant="contained"></Button>
-          <Button variant="contained"></Button>
-          <Button variant="contained"></Button>
+          <td>
+            <Button className="game-square" variant="contained"></Button>
+          </td>
+          <td>
+            <Button className="game-square" variant="contained"></Button>
+          </td>
+          <td>
+            <Button className="game-square" variant="contained"></Button>
+          </td>
         </tr>
       </table>
     </div>

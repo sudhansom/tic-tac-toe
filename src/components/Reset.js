@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 function Reset() {
   return (
     <div>
-      <Button variant="contained">Contained</Button>
+      <Button variant="contained">Reset Game</Button>
     </div>
   );
 }
