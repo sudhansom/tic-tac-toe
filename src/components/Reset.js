@@ -1,9 +1,10 @@
 import React from "react";
 import Button from "@mui/material/Button";
+import "./board.css";
 
 function Reset() {
   return (
-    <div>
+    <div className="resetBtn">
       <Button variant="contained">Reset Game</Button>
     </div>
   );

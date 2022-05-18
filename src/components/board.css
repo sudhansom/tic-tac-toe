@@ -7,4 +7,10 @@ table {
   width: 70px;
   height: 70px;
   vertical-align: top;
+  color: white;
+}
+.resetBtn {
+  font-size: 24px;
+  padding: 12px;
+  margin: 10px auto;
 }
