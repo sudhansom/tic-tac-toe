@@ -7,12 +7,17 @@ import { reset } from "../redux/actions";
 
 function Reset() {
   const dispatch = useDispatch();
+  const numberOfMoves = useSelector((state) => state.numberOfMoves);
   const handleClick = () => {
     dispatch(reset());
   };
   return (
     <div className="resetBtn">
-      <Button onClick={handleClick} variant="contained">
+      <Button
+        onClick={handleClick}
+        disabled={numberOfMoves < 9 ? true : false}
+        variant="contained"
+      >
         Reset Game
       </Button>
     </div>
