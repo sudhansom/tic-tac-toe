@@ -9,7 +9,7 @@ const reducer = (state = initialState, action) => {
       const row = action.payload.row;
       const col = action.payload.col;
       const boardState = state.boardState;
-      boardState[row][col] = state.currentPlayer;
+      boardState[row][col] = state.currentPlayer === 1 ? "X" : "O";
       return {
         ...state,
         currentPlayer: state.currentPlayer === 1 ? 2 : 1,
