@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Button from "@mui/material/Button";
 import { clickedBtn } from "../redux/actions";
+
+import "./board.css";
 
 function MButton({ row, col }) {
   const state = useSelector((state) => state);
@@ -13,7 +15,12 @@ function MButton({ row, col }) {
   };
   console.log(boardState);
   return (
-    <Button onClick={clickHandle} className="game-square" variant="contained">
+    <Button
+      onClick={clickHandle}
+      className="game-square"
+      disabled={boardState[row][col] !== ""}
+      variant="contained"
+    >
       {boardState[row][col]}
     </Button>
   );
