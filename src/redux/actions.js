@@ -1,6 +1,10 @@
-export const clickedBtn = (currentPlayer) => {
+export const clickedBtn = (currentPlayer, row, col) => {
   return {
     type: "Clicked",
-    payload: currentPlayer,
+    payload: {
+      currentPlayer,
+      row,
+      col,
+    },
   };
 };
