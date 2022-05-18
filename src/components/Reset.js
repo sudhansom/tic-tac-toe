@@ -1,9 +1,10 @@
 import React from "react";
+import Button from "@mui/material/Button";
 
 function Reset() {
   return (
     <div>
-      <button>Reset Game</button>
+      <Button variant="contained">Contained</Button>
     </div>
   );
 }

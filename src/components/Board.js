@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@mui/material/Button";
 import "./board.css";
 
 function Board() {
@@ -6,19 +7,19 @@ function Board() {
     <div className="board">
       <table>
         <tr>
-          <button></button>
-          <button></button>
-          <button></button>
+          <Button variant="contained"></Button>
+          <Button variant="contained"></Button>
+          <Button variant="contained"></Button>
         </tr>
         <tr>
-          <button></button>
-          <button></button>
-          <button></button>
+          <Button variant="contained"></Button>
+          <Button variant="contained"></Button>
+          <Button variant="contained"></Button>
         </tr>
         <tr>
-          <button></button>
-          <button></button>
-          <button></button>
+          <Button variant="contained"></Button>
+          <Button variant="contained"></Button>
+          <Button variant="contained"></Button>
         </tr>
       </table>
     </div>
