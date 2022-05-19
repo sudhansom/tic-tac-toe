@@ -30,6 +30,7 @@ const reducer = (state = initialState, action) => {
     case "GAME_OWN":
       return {
         ...state,
+        currentPlayer: action.payload,
         own: true,
       };
 

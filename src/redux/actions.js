@@ -15,8 +15,9 @@ export const reset = () => {
   };
 };
 
-export const own = () => {
+export const own = (currentPlayer) => {
   return {
     type: "GAME_OWN",
+    payload: currentPlayer,
   };
 };
