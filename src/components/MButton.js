@@ -13,21 +13,28 @@ function MButton({ row, col }) {
   const currentPlayerSign = currentPlayer === 1 ? "X" : "O";
 
   const onePlayerOwn = () => {
-    if (
-      boardState[0][0] === "X" &&
-      boardState[0][1] === "X" &&
-      boardState[0][2] === "X"
-    ) {
-      dispatch(won(currentPlayer));
-      return true;
-    } else {
-      return false;
-    }
+    const arr = [0, 1, 2];
+    const wonHorizontal = arr.some((row) => {
+      return (
+        boardState[row][0] === currentPlayerSign &&
+        boardState[row][1] === currentPlayerSign &&
+        boardState[row][2] === currentPlayerSign
+      );
+    });
+    const wonVertical = arr.some((col) => {
+      return (
+        boardState[0][col] === currentPlayerSign &&
+        boardState[1][col] === currentPlayerSign &&
+        boardState[2][col] === currentPlayerSign
+      );
+    });
+    return wonHorizontal || wonVertical;
   };
 
   const clickHandle = () => {
     dispatch(clickedBtn(currentPlayer, row, col));
     if (onePlayerOwn()) {
+      dispatch(won(currentPlayer));
       console.log(`player ${currentPlayer} won the game.`);
     }
   };
