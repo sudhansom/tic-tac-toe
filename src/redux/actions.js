@@ -14,3 +14,9 @@ export const reset = () => {
     type: "RESET",
   };
 };
+
+export const own = () => {
+  return {
+    type: "GAME_OWN",
+  };
+};
