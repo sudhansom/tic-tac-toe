@@ -28,7 +28,15 @@ function MButton({ row, col }) {
         boardState[2][col] === currentPlayerSign
       );
     });
-    return wonHorizontal || wonVertical;
+    const wonDiagonal1 =
+      boardState[0][0] === currentPlayerSign &&
+      boardState[1][1] === currentPlayerSign &&
+      boardState[2][2] === currentPlayerSign;
+    const wonDiagonal2 =
+      boardState[0][2] === currentPlayerSign &&
+      boardState[1][1] === currentPlayerSign &&
+      boardState[0][2] === currentPlayerSign;
+    return wonHorizontal || wonVertical || wonDiagonal1 || wonDiagonal2;
   };
 
   const clickHandle = () => {
