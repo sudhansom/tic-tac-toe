@@ -18,6 +18,7 @@ function MButton({ row, col }) {
       boardState[0][1] === "X" &&
       boardState[0][2] === "X"
     ) {
+      dispatch(own());
       return true;
     } else {
       return false;
@@ -27,12 +28,11 @@ function MButton({ row, col }) {
   const clickHandle = () => {
     if (onePlayerOwn()) {
       console.log(`player ${currentPlayer} won the game.`);
-      dispatch(own());
     } else {
       dispatch(clickedBtn(currentPlayer, row, col));
     }
   };
-  console.log(boardState);
+
   return (
     <Button
       onClick={clickHandle}

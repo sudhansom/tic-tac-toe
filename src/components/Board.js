@@ -7,7 +7,6 @@ function Board() {
   const boardState = new Array(BOARD_WIDTH)
     .fill()
     .map(() => new Array(BOARD_WIDTH).fill(""));
-  console.log("state", boardState);
   return (
     <div className="board">
       <table role={"grid"}>

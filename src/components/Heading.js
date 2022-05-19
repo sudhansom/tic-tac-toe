@@ -7,7 +7,7 @@ function Heading() {
   return (
     <div>
       {own ? (
-        <h3 className="won">Player {currentPlayer}'s own.</h3>
+        <h3 className="won">Player {currentPlayer} own.</h3>
       ) : (
         <h2 className="playing">Player {currentPlayer}'s Turn...</h2>
       )}
