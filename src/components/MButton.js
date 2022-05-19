@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Button from "@mui/material/Button";
-import { clickedBtn, own } from "../redux/actions";
+import { clickedBtn, won } from "../redux/actions";
 
 import "./board.css";
 
@@ -18,7 +18,7 @@ function MButton({ row, col }) {
       boardState[0][1] === "X" &&
       boardState[0][2] === "X"
     ) {
-      dispatch(own(currentPlayer));
+      dispatch(won(currentPlayer));
       return true;
     } else {
       return false;

@@ -1,5 +1,5 @@
 const initialState = {
-  own: false,
+  won: false,
   numberOfMoves: 0,
   currentPlayer: 1,
   boardState: new Array(3).fill().map(() => new Array(3).fill("")),
@@ -21,17 +21,17 @@ const reducer = (state = initialState, action) => {
 
     case "RESET":
       return {
-        own: false,
+        won: false,
         numberOfMoves: 0,
         currentPlayer: 1,
         boardState: new Array(3).fill().map(() => new Array(3).fill("")),
       };
 
-    case "GAME_OWN":
+    case "GAME_WON":
       return {
         ...state,
         currentPlayer: action.payload,
-        own: true,
+        won: true,
       };
 
     default:

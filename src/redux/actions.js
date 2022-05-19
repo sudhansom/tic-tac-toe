@@ -15,9 +15,9 @@ export const reset = () => {
   };
 };
 
-export const own = (currentPlayer) => {
+export const won = (currentPlayer) => {
   return {
-    type: "GAME_OWN",
+    type: "GAME_WON",
     payload: currentPlayer,
   };
 };
