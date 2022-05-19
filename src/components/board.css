@@ -19,3 +19,9 @@ MButton {
 .btn {
   font-size: 50px;
 }
+.playing {
+  color: rgb(25, 176, 95);
+}
+.won {
+  color: red;
+}

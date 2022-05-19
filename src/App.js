@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <div className="game-board">
-        <h1>Game Board</h1>
+        <h1>TIC TAC TOE</h1>
         <Heading />
         <Board />
         <Reset />

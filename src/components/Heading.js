@@ -6,11 +6,11 @@ function Heading() {
   const own = useSelector((state) => state.own);
   return (
     <div>
-      <h3>
-        {own
-          ? `Player ${currentPlayer}'s own.`
-          : `Player ${currentPlayer}'s Turn...`}
-      </h3>
+      {own ? (
+        <h3 className="won">Player {currentPlayer}'s own.</h3>
+      ) : (
+        <h2 className="playing">Player {currentPlayer}'s Turn...</h2>
+      )}
     </div>
   );
 }

@@ -10,10 +10,12 @@
   height: 32%;
   border-radius: 8%;
   margin: auto;
-  background-color: bisque;
+  background-color: rgb(221, 225, 231);
+  padding: 2rem;
 }
 
 h1 {
   margin-top: 10px;
   padding-top: 12px;
+  color: rgb(10, 10, 198);
 }
